@@ -176,10 +176,10 @@ namespace lutok3 {
         lua_pushnumber(state, static_cast<lua_Number>(value));
     }
 
-    template<> void State::push(const std::string & value)
+    /*template<> void State::push(const std::string & value)
     {
         lua_pushlstring(state, value.c_str(), value.length());
-    }
+    }*/
 
     template<> void State::push(const char * value)
     {
@@ -350,7 +350,7 @@ namespace lutok3 {
     {
         std::string buffer{ stringFormat(fmt, std::forward<Args>(args)...) };
 
-        lua_pushstring(state, buffer.c_str());
+        lua_pushlstring(state, buffer.c_str(), buffer.length());
     }
 
     void State::pop(size_t count)
