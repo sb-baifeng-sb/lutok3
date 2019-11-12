@@ -1,9 +1,11 @@
-﻿#pragma once
+﻿
+#ifndef __LUTOK3__
+#define __LUTOK3__
 
 extern "C" {
-#include <lua.h>
-#include <lualib.h>
-#include <lauxlib.h>
+    #include <lua.h>
+    #include <lualib.h>
+    #include <lauxlib.h>
 }
 
 #include <memory>
@@ -238,3 +240,5 @@ namespace lutok3 {
 }
 
 #include "lutok3.ipp"
+
+#endif
