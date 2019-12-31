@@ -11,7 +11,8 @@ extern "C" {
 #include <memory>
 #include <exception>
 #include <string>
-#include <filesystem>
+//#include <filesystem>
+#include <experimental/filesystem>
 #include <cstdint>
 #include <functional>
 #include <type_traits>
@@ -21,7 +22,7 @@ namespace lutok3 {
 #if _MSC_VER >= 1900 && _MSC_VER < 2000
     namespace fs = std::experimental::filesystem::v1;
 #else
-    namespace fs = std::filesystem;
+    namespace fs = std::experimental::filesystem;
 #endif
 
     class State;
@@ -109,7 +110,7 @@ namespace lutok3 {
             operator bool();
             operator double();
             operator float();
-            operator long();
+            //operator long();
             operator int();
             operator int64_t();
             operator CFunction();

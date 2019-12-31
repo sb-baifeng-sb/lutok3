@@ -469,10 +469,10 @@ namespace lutok3 {
         return static_cast<int64_t>(lua_tointeger(state, index));
     }
 
-    State::ReturnValue::operator long()
+    /*State::ReturnValue::operator long()
     {
         return static_cast<long>(lua_tonumber(state, index));
-    }
+    }*/
 
     State::ReturnValue::operator int()
     {
